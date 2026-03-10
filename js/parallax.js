@@ -9,10 +9,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let latestX = 0;  
     let latestY = 0;  
-    let frameRequested = false;  
 
-    const updateBackground = () => {  
-        frameRequested = false;  
+        const updateBackground = () => {  
+            frameRequested = false;
+        };
+
+        // Check user's motion preference
+        const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (!prefersReducedMotion) { 
         bg.style.transform = `translate(${latestX}px, ${latestY}px) scale(1.1)`;  
     };  
 

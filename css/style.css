@@ -33,8 +33,6 @@ body {
 
     filter: blur(10px);
 
-    z-index: 1;
-
     transition: transform 0.1s linear;
 }
 
