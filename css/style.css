@@ -1,0 +1,96 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+
+
+/* HERO SECTION */
+
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+/* BACKGROUND IMAGE */
+
+.hero-bg {
+
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: -50px;
+
+    width: 110%;
+    height: 110%;
+
+    background-image: url("https://t3.ftcdn.net/jpg/00/91/60/36/240_F_91603601_ttU7Wl4LlhcSSWvsRkqyfISEHfwHYMhH.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(10px);
+
+    transition: transform 0.1s linear;
+}
+
+
+
+/* COLOR OVERLAY */
+
+.hero-overlay {
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(135deg,
+            rgba(13, 110, 253, 0.75),
+            rgba(32, 201, 151, 0.65));
+
+    z-index: 2;
+
+}
+
+
+
+/* HERO CONTENT */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 3;
+
+}
+
+
+
+/* DESTINATION CARDS */
+
+.destination-card img {
+
+    height: 220px;
+    object-fit: cover;
+
+}
+
+.destination-card {
+
+    transition: transform .25s ease, box-shadow .25s ease;
+
+}
+
+.destination-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+
+}
