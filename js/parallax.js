@@ -1,5 +1,3 @@
-const hero = document.querySelector(".hero");
-const bg = document.querySelector(".hero-bg");
 
 document.addEventListener("DOMContentLoaded", () => {
     const hero = document.querySelector(".hero");
@@ -9,10 +7,24 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    hero.addEventListener("mousemove", (e) => {
-        const x = (window.innerWidth / 2 - e.clientX) / 40;
-        const y = (window.innerHeight / 2 - e.clientY) / 40;
+    let latestX = 0;  
+    let latestY = 0;  
+    let frameRequested = false;  
 
-        bg.style.transform = `translate(${x}px, ${y}px) scale(1.1)`;
-    });
+    const updateBackground = () => {  
+        frameRequested = false;  
+        bg.style.transform = `translate(${latestX}px, ${latestY}px) scale(1.1)`;  
+    };  
+
+    const handlePointerMove = (e) => {  
+        latestX = (window.innerWidth / 2 - e.clientX) / 40;  
+        latestY = (window.innerHeight / 2 - e.clientY) / 40;  
+
+        if (!frameRequested) {  
+            frameRequested = true;  
+            window.requestAnimationFrame(updateBackground);  
+        }  
+    };  
+
+    hero.addEventListener("pointermove", handlePointerMove);
 });
