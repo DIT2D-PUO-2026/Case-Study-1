@@ -1,64 +1,62 @@
-body{
-font-family:system-ui;
+body {
+    font-family: system-ui;
 }
 
 
 
 /* HERO SECTION */
 
-.hero{
-position:relative;
-height:100vh;
-overflow:hidden;
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
 
 
 /* BACKGROUND IMAGE */
 
-.hero-bg{
+.hero-bg {
 
-position:absolute;
+    position: absolute;
+    z-index: 1;
+    top: -50px;
+    left: -50px;
 
-top:-50px;
-left:-50px;
+    width: 110%;
+    height: 110%;
 
-width:110%;
-height:110%;
+    background-image: url("https://t3.ftcdn.net/jpg/00/91/60/36/240_F_91603601_ttU7Wl4LlhcSSWvsRkqyfISEHfwHYMhH.jpg");
 
-background-image:url("https://t3.ftcdn.net/jpg/00/91/60/36/240_F_91603601_ttU7Wl4LlhcSSWvsRkqyfISEHfwHYMhH.jpg");
+    background-size: cover;
+    background-position: center;
 
-background-size:cover;
-background-position:center;
+    filter: blur(10px);
 
-filter:blur(10px);
+    z-index: 1;
 
-z-index:1;
-
-transition:transform 0.1s linear;
+    transition: transform 0.1s linear;
 }
 
 
 
 /* COLOR OVERLAY */
 
-.hero-overlay{
+.hero-overlay {
 
-position:absolute;
+    position: absolute;
 
-top:0;
-left:0;
+    top: 0;
+    left: 0;
 
-width:100%;
-height:100%;
+    width: 100%;
+    height: 100%;
 
-background:linear-gradient(
-135deg,
-rgba(13,110,253,0.75),
-rgba(32,201,151,0.65)
-);
+    background: linear-gradient(135deg,
+            rgba(13, 110, 253, 0.75),
+            rgba(32, 201, 151, 0.65));
 
-z-index:2;
+    z-index: 2;
 
 }
 
@@ -66,11 +64,11 @@ z-index:2;
 
 /* HERO CONTENT */
 
-.hero-content{
+.hero-content {
 
-position:relative;
+    position: relative;
 
-z-index:3;
+    z-index: 3;
 
 }
 
@@ -78,23 +76,23 @@ z-index:3;
 
 /* DESTINATION CARDS */
 
-.destination-card img{
+.destination-card img {
 
-height:220px;
-object-fit:cover;
-
-}
-
-.destination-card{
-
-transition:transform .25s ease, box-shadow .25s ease;
+    height: 220px;
+    object-fit: cover;
 
 }
 
-.destination-card:hover{
+.destination-card {
 
-transform:translateY(-6px);
+    transition: transform .25s ease, box-shadow .25s ease;
 
-box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.destination-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 
 }

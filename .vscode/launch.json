@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "/home/flawzfreq/Case-Study-1/index.html"
+            "file": "${workspaceFolder}/index.html"
         }
     ]
 }
